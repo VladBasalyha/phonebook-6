@@ -1,3 +1,4 @@
+import { FilterContacts } from 'components/Filter/Filter';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contactsSlice';
@@ -47,6 +48,8 @@ export const ContactForm = () => {
     <>
       <form onSubmit={onHandleSubmit}>
         <TextField
+          variant="filled"
+          label={'name'}
           value={name}
           onChange={onInputChange}
           name={'name'}
@@ -55,6 +58,8 @@ export const ContactForm = () => {
         ></TextField>
         <br />
         <TextField
+          variant="filled"
+          label={'number'}
           value={number}
           onChange={onInputChange}
           name={'number'}
@@ -67,6 +72,7 @@ export const ContactForm = () => {
           Add contact
         </Button>
       </form>
+      <FilterContacts></FilterContacts>
     </>
   );
 };
