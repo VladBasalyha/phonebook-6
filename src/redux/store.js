@@ -3,7 +3,6 @@ import { contactsReducer } from './contactsSlice';
 import { filterReducer } from './filtersSilce';
 
 import storage from 'redux-persist/lib/storage';
-import { combineReducers } from 'redux';
 import {
   persistReducer,
   FLUSH,
